@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manongsong, Roann Daphne | wip</title>
+    <style>
+      body {
+        background: url(bg.jpg);
+      }
+
+      .tray {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: fit-content;
+        height: fit-content;
+        transform: translate(-50%, -50%);
+        background-color: #f0f0f0;
+        padding: 20px;
+        border: 3px dotted #ccc;
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: 100px 100px 100px 100px 20px 300px;
+        gap: 2px;
+        grid-row: minmax(0px, auto);
+      }
+
+      .bp {
+        grid-column: 6;
+        grid-row: 1/7;
+      }
+
+      #mepic {
+        background-color: #ddd;
+        display: flex;
+        padding: 5px;
+        border: 1px solid #999;
+        max-width: 100%;
+        /* Adjust size as needed */
+        max-height: 100%;
+        /* Adjust size as needed */
+      }
+
+      .pat {
+        grid-column: 1 / 7;
+        grid-row: 3;
+      }
+
+      .pipeback {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        scale: 50%;
+      }
+
+      #daph {
+        font-family: Verdana;
+        font-weight: bold;
+        font-style: italic;
+        color: rgb(145, 92, 156);
+        font-size: 30px;
+        text-align: center;
+        margin-top: 20px;
+        /* Add margin to the top of the text */
+      }
+
+      #ping {
+        width: 100px;
+        /* Adjust size as needed */
+        height: 100px;
+        /* Adjust size as needed */
+      }
+
+      .label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 10px;
+        font-style: italic;
+        color: rgb(219, 138, 169);
+      }
+
+      .am {
+        margin-top: 10px;
+        grid-column: 1/7;
+        grid-row: 4;
+      }
+
+      #buttontext {
+        margin: 1px 1px 1px 1px;
+        font-family: monospace;
+        text-decoration: none;
+        display: inline-block;
+        border: 1px solid #ccc;
+        text-align: justify;
+        font-size: 16px;
+        width: 100%;
+        padding: 3px;
+        /* Reset margin */
+        border-radius: 5px;
+        /* Add rounded corners */
+      }
+
+      #hb {
+        width: 100 px;
+        height: 500 px;
+      }
+
+      .cw {
+        grid-column: 1/3;
+        padding-right: 6px;
+        grid-row: 5;
+      }
+
+      .sw {
+        grid-column: 1/3;
+        padding-right: 6px;
+        grid-row: 80;
+      }
+
+      .vc {
+        text-align: center;
+        grid-column: 1/7;
+        grid-row: 85;
+      }
+
+      .pd {
+        text-align: center;
+        grid-column: 1/3;
+        grid-row: 100;
+      }
+
+      .fetch {
+        text-align: center;
+        grid-column: 1/4;
+        grid-row: 110;
+      }
+
+      .defense {
+        text-align: center;
+        grid-column: 4/7;
+        grid-row: 110;
+      }
+
+      #fe {
+        height: 200px;
+        width: 350px;
+      }
+
+      #cap {
+        height: 200px;
+        width: 350px;
+      }
+
+      .docs {
+        text-align: center;
+        grid-column: 1/3;
+        grid-row: 140;
+      }
+
+      .qna {
+        text-align: center;
+        grid-column: 1/3;
+        grid-row: 145;
+      }
+
+      .wovv {
+        text-align: center;
+        grid-column: 3/5;
+        grid-row: 145;
+      }
+
+      .groupy {
+        text-align: center;
+        grid-column: 5/7;
+        grid-row: 145;
+      }
+
+      #qn {
+        height: 100px;
+        width: auto;
+      }
+
+      #vee {
+        height: 100px;
+        width: auto;
+      }
+
+      #fin {
+        height: 100px;
+        width: auto;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Verdana, sans-serif;
+        margin: 0;
+      }
+
+      .mySlides {
+        display: none;
+      }
+
+      img {
+        vertical-align: middle;
+      }
+
+      .slideshow-container {
+        max-width: 250px;
+        max-height: 250px;
+        position: relative;
+        margin: auto;
+        grid-column: 1/7;
+        grid-row: 7;
+        align-self: center;
+      }
+
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      /* Caption text */
+      .text {
+        color: #9a75ca;
+        font-size: 15px;
+        font-weight: bold;
+        padding: 8px 12px;
+        bottom: 1px;
+        width: 100%;
+        text-align: center;
+      }
+
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active,
+      .dot:hover {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="tray">
+      <div class="pat">
+        <p id="daph">What's Baking in the Oven?</p>
+        <hr />
+      </div>
+      <div class="am">
+        <p id="buttontext">
+          How about we go visit the kitchen and see what this pâtissier is
+          whipping up?
+        </p>
+      </div>
+      <br />
+      <br />
+      <br />
+      <div class="cw">
+        <p id="buttontext">
+          <i>Prints</i>
+        </p>
+      </div>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 6</div>
+          <img src="CV.png" style="width: 100%" />
+          <div class="text">Curriculum Vitae</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 6</div>
+          <img src="postcard pt1.png" style="width: 100%" />
+          <div class="text">Postcard Front</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 6</div>
+          <img src="postcard pt2.png" style="width: 100%" />
+          <div class="text">Postcard Back</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">4 / 6</div>
+          <img src="brochure1.png" style="width: 100%" />
+          <div class="text">Brochure Front</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">5 / 6</div>
+          <img src="brochurept2.png" style="width: 100%" />
+          <div class="text">Brochure Back</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">6 / 6</div>
+          <img src="flyer.png" style="width: 100%" />
+          <div class="text">Flyer</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides((slideIndex += n));
+        }
+
+        function currentSlide(n) {
+          showSlides((slideIndex = n));
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {
+            slideIndex = 1;
+          }
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+
+      <div class="sw">
+        <p id="buttontext">
+          <i>Showreel</i>
+        </p>
+      </div>
+
+      <div class="vc">
+        <video controls width="400" height="auto">
+          <source src="WICREATEGT6_Manongsong.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
+      <div class="pd">
+        <p id="buttontext">
+          <i>Pitch Decks</i>
+        </p>
+      </div>
+      <div class="fetch">
+        <a
+          href="https://www.canva.com/design/DAF0Ms5WTy4/bAiAzGNuveKvVOTLx1pgBQ/view?utm_content=DAF0Ms5WTy4&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel"
+          ><img src="COVER.png" alt="FETCH" id="fe"
+        /></a>
+      </div>
+
+      <div class="defense">
+        <a
+          href="https://www.canva.com/design/DAF6l5qi6zA/mNQWmmsW9SaeCEnDawHz_w/view?utm_content=DAF6l5qi6zA&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel"
+          ><img src="cover slides.png" alt="cap" id="cap"
+        /></a>
+      </div>
+
+      <div class="docs">
+        <p id="buttontext">
+          <i>CAPSTONE Documentation</i>
+        </p>
+      </div>
+
+      <div class="qna"><img src="qna.jpg" alt="qna" id="qn" /></div>
+      <div class="wovv"><img src="wholeview.jpg" alt="wovv" id="vee" /></div>
+      <div class="groupy"><img src="grouppic.jpg" alt="groupy" id="fin" /></div>
+
+      <br />
+
+      <div class="label">
+        <p>click the cupcake to go back</p>
+      </div>
+      <br />
+      <br />
+      <br />
+
+      <div class="pipeback">
+        <a href="QA.html">
+          <img id="ping" src="piping.png" alt="pipeback" />
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

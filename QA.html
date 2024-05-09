@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manongsong, Roann Daphne | homepage</title>
+    <style>
+      body {
+        background: url(bg.jpg);
+      }
+
+      .tray {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: fit-content;
+        height: fit-content;
+        transform: translate(-50%, -50%);
+        background-color: #f0f0f0;
+        padding: 20px;
+        border: 3px dotted #ccc;
+        border-radius: 5px;
+        display: grid;
+        grid-template-columns: 300px 20px 100px 100px 100px 100px;
+        gap: 2px;
+        grid-row: minmax(0px, auto);
+      }
+
+      .bp {
+        grid-column: 1;
+        grid-row: 1/7;
+      }
+
+      #bakery {
+        background-color: #ddd;
+        display: flex;
+        padding: 5px;
+        border: 1px solid #999;
+        max-width: 100%;
+        /* Adjust size as needed */
+        max-height: 100%;
+        /* Adjust size as needed */
+      }
+
+      .pat {
+        grid-column: 3 / 6;
+        grid-row: 1;
+      }
+
+      .round {
+        grid-column: 6;
+        grid-row: 1;
+      }
+
+      #daph {
+        font-family: Verdana;
+        font-weight: bold;
+        font-style: italic;
+        color: rgb(145, 92, 156);
+        font-size: 30px;
+        text-align: center;
+        margin-top: 20px;
+        /* Add margin to the top of the text */
+      }
+
+      #logo {
+        border-radius: 50%;
+        /* Make the image circular */
+        width: 100px;
+        /* Adjust size as needed */
+        height: 100px;
+        /* Adjust size as needed */
+      }
+
+      .am {
+        grid-column: 3 / 7;
+        grid-row: 2/3;
+        transition: 0.3s;
+      }
+
+      #buttontext {
+        margin: 0;
+        font-family: monospace;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        width: 100%;
+        /* Make the button extend to the full width of its container */
+        margin: 0;
+        /* Reset margin */
+        cursor: pointer;
+        border-radius: 5px;
+        /* Add rounded corners */
+      }
+
+      #hb {
+        width: 100 px;
+        height: 500 px;
+        transition: 0.3s;
+      }
+
+      .cw {
+        grid-column: 3/6;
+        grid-row: 3/4;
+        transition: 0.3s;
+      }
+
+      .re {
+        grid-column: 3/6;
+        grid-row: 4/5;
+        transition: 0.3s;
+      }
+
+      .ci {
+        grid-column: 3/7;
+        grid-row: 5/6;
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="tray">
+      <div class="bp">
+        <img id="bakery" src="bakery.jpg" alt="Daph's Oven" />
+      </div>
+      <div class="pat">
+        <p id="daph">Daphne's Pâtisserie</p>
+      </div>
+      <div class="round">
+        <a href="QA.html">
+          <img id="logo" src="logo.jpg" alt="bread" />
+        </a>
+      </div>
+      <div class="am">
+        <hr />
+        <a href="about.html"
+          ><button id="hb">
+            <p id="buttontext">About Me</p>
+          </button></a
+        >
+      </div>
+      <div class="cw">
+        <a href="wip.html"
+          ><button id="hb">
+            <p id="buttontext">Works</p>
+          </button></a
+        >
+      </div>
+      <div class="re">
+        <a href="reflection.html"
+          ><button id="hb">
+            <p id="buttontext">Takeaway Reflection</p>
+          </button></a
+        >
+      </div>
+      <div class="ci">
+        <a href="contactinfo.html"
+          ><button id="hb">
+            <p id="buttontext">Contact Us</p>
+          </button></a
+        >
+        <br />
+        <hr />
+      </div>
+    </div>
+  </body>
+</html>

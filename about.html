@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(bg.jpg);
+        }
+
+        .tray {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: fit-content;
+            height: fit-content;
+            transform: translate(-50%, -50%);
+            background-color: #f0f0f0;
+            padding: 20px;
+            border: 3px dotted #ccc;
+            border-radius: 5px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px 20px 300px;
+            gap: 2px;
+            grid-row: minmax(0px, auto);
+            ;
+        }
+
+        .bp {
+            grid-column: 6;
+            grid-row: 1/7;
+        }
+
+        #mepic {
+            background-color: #ddd;
+            display: flex;
+            padding: 5px;
+            border: 1px solid #999;
+            max-width: 100%;
+            /* Adjust size as needed */
+            max-height: 100%;
+            /* Adjust size as needed */
+        }
+
+        .pat {
+            grid-column: 1 / 5;
+            grid-row: 1;
+        }
+
+        .pipeback {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            scale: 50%;
+        }
+
+        #daph {
+            font-family: Verdana;
+            font-weight: bold;
+            font-style: italic;
+            color: rgb(145, 92, 156);
+            font-size: 30px;
+            text-align: center;
+            margin-top: 20px;
+            /* Add margin to the top of the text */
+        }
+
+        #ping {
+            width: 100px;
+            /* Adjust size as needed */
+            height: 100px;
+            /* Adjust size as needed */
+        }
+
+        .label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font-size: 10px;
+            font-style: italic;
+            color: rgb(219, 138, 169);
+        }
+
+        .am {
+            grid-column: 1/5;
+            grid-row: 2;
+        }
+
+        #buttontext {
+            margin: 1px 1px 1px 1px;
+            font-family: monospace;
+            text-decoration: none;
+            display: inline-block;
+            border: 1px solid #ccc;
+            text-align: justify;
+            font-size: 16px;
+            width: 100%;
+            padding: 3px;
+            /* Reset margin */
+            border-radius: 5px;
+            /* Add rounded corners */
+        }
+
+        #hb {
+            width: 100 px;
+            height: 500 px;
+        }
+
+        .cw {
+            grid-column: 1/3;
+            padding-right: 6px;
+            grid-row: 3/4;
+        }
+
+        .re {
+            grid-column: 3/5;
+            padding-left: 3px;
+            grid-row: 3/4;
+        }
+
+        .ci {
+            grid-column: 1/3;
+            padding-right: 6px;
+            grid-row: 4/7;
+        }
+
+        .ho {
+            grid-column: 3/5;
+            padding-right: 3px;
+            grid-row: 4/7;
+        }
+
+        ul {
+            text-indent: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tray">
+        <div class="pat">
+            <p id="daph">About the "Baker"</p>
+            <hr>
+        </div>
+        <div class="bp"><img id="mepic" src="mepic.JPG" alt="Daph"></div>
+        <div class="pipeback">
+            <a href="QA.html">
+                <img id="ping" src="piping.png" alt="pipeback">
+            </a>
+        </div>
+        <div class="label"><p>click the cupcake to go back</p></div>
+        <div class="am">
+            <p id="buttontext">Meet the mastermind behind this Pâtisserie! An 18-year-old Grade 12 HUMSS student of De La Salle Lipa, Miss <strong>Roann Daphne C. Manongsong</strong>!</p></div>
+        <div class="cw">
+            <p id="buttontext"><b><i>Likes</i></b></p></div> 
+        <div class="re"> 
+            <p id="buttontext"><b><i>Hobbies</i></b></p></div>
+        <div class="ci"> 
+            <ul id="buttontext">
+                <li>food</li>
+                <li>art</li>
+                <li>music</li>
+                <li>BTS</li>
+                <li>Anime</li>
+            </ul>
+        </div>
+        <div class="re"> 
+            <p id="buttontext"><b><i>Hobbies</i></b></p></div>
+        <div class="ho"> 
+            <ul id="buttontext">
+                <li>drawing</li>
+                <li>singing</li>
+                <li>reading books</li>
+                <li>violin</li>
+                <li>watching streams/shows</li>
+            </ul>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
